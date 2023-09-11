@@ -144,6 +144,5 @@ public class TestaChallenge {
         } else if (c.isPessoaJuridica()) {
             System.out.println("\nEste cliente está cadastrado como Pessoa Jurídica (PJ).");
         }
-
 	}
 }
