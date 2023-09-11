@@ -4,6 +4,7 @@ import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
 public class Servico {
+	//Atributos da classe Servico
 	private int idServico;
     private int idCliente;
     private int idPrestador;
@@ -11,6 +12,7 @@ public class Servico {
     private String localUsuario;
     private String statusOrdem;
 
+    //Construtor parametrizado de Servico
     public Servico(int idServico, int idCliente, int idPrestador, Timestamp horaServico, String localUsuario, String statusOrdem) {
         this.idServico = idServico;
         this.idCliente = idCliente;
@@ -20,6 +22,7 @@ public class Servico {
         this.statusOrdem = statusOrdem;
     }
 
+    //Getters e Setters
 	public int getIdServico() {
 		return idServico;
 	}
@@ -68,6 +71,7 @@ public class Servico {
 		this.statusOrdem = statusOrdem;
 	}
 	
+	//Método toString com override
 	@Override
 	public String toString() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");

@@ -1,12 +1,13 @@
 package Challenge;
 
 public class Prestador {
-
+	//Atributos da classe Prestador
 	private int idPrestador;
     private int idEmpresaFuncionario;
     private String localPrestador;
     private String placaGuincho;
     
+    //Construtor parametrizado de Prestador
 	public Prestador(int idPrestador, int idEmpresaFuncionario, String localPrestador, String placaGuincho) {
 		this.idPrestador = idPrestador;
 		this.idEmpresaFuncionario = idEmpresaFuncionario;
@@ -14,6 +15,7 @@ public class Prestador {
 		this.placaGuincho = placaGuincho;
 	}
 
+	//Getters e Setters
 	public int getIdPrestador() {
 		return idPrestador;
 	}
@@ -46,6 +48,7 @@ public class Prestador {
 		this.placaGuincho = placaGuincho;
 	}
 	
+	//Método toString com override
 	@Override
 	public String toString() {
         return "Prestador [ID: " + idPrestador + ", ID da Empresa/Funcionário: " + idEmpresaFuncionario +

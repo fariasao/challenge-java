@@ -1,7 +1,7 @@
 package Challenge;
 
 public class Cliente {
-
+	//Atributos da classe Cliente
 	private int idCliente;
     private String nomeCliente;
     private String senhaCliente;
@@ -10,7 +10,7 @@ public class Cliente {
     private String TipoCliente;
     private String cpfCnpjCliente;
     
-    
+    //Construtor parametrizado de Cliente
 	public Cliente(int idCliente, String nomeCliente, String senhaCliente, String enderecoCliente, long telefoneCliente, 
 			String TipoCliente, String cpfCnpjCliente) {
 		this.idCliente = idCliente;
@@ -22,6 +22,7 @@ public class Cliente {
 		this.cpfCnpjCliente = cpfCnpjCliente;
 	}
 	
+	//Getters e Setters
 	public int getIdCliente() {
 		return idCliente;
 	}
@@ -78,6 +79,7 @@ public class Cliente {
 		this.cpfCnpjCliente = cpfCnpjCliente;
 	}
 	
+	//Método toString com Override
 	@Override
     public String toString() {
         return "Cliente [ID: " + idCliente + ", Nome: " + nomeCliente +
@@ -85,6 +87,7 @@ public class Cliente {
                ", Tipo: " + TipoCliente + ", CPF/CNPJ: " + cpfCnpjCliente + "]";
     }
 	
+	//Métodos de verificação do tipo de cliente
 	public boolean isPessoaFisica() {
         return "CPF".equalsIgnoreCase(TipoCliente); // Verifica se o tipo do cliente é "CPF" (ignorando maiúsculas/minúsculas)
     }

@@ -1,14 +1,17 @@
 package Challenge;
 
 public class ClienteApolice {
-
+	//Atributos da classe ClienteApolice
 	private int idCliente;
     private int idApolice;
+    
+    //Construtor parametrizado de ClienteApolice
 	public ClienteApolice(int idCliente, int idApolice) {
 		this.idCliente = idCliente;
 		this.idApolice = idApolice;
 	}
 	
+	//Getters e Setters
 	public int getIdCliente() {
 		return idCliente;
 	}

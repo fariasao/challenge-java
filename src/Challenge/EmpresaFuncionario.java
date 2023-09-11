@@ -1,16 +1,19 @@
 package Challenge;
 
 public class EmpresaFuncionario {
-    private int idEmpresaFuncionario;
+	//Atributos da classe EmpresaFuncionario
+	private int idEmpresaFuncionario;
     private int idEmpresa;
     private int idFuncionario;
 
+    //Construtor parametrizado de EmpresaFuncionario
     public EmpresaFuncionario(int idEmpresaFuncionario, int idEmpresa, int idFuncionario) {
         this.idEmpresaFuncionario = idEmpresaFuncionario;
         this.idEmpresa = idEmpresa;
         this.idFuncionario = idFuncionario;
     }
 
+    //Getters e Setters
 	public int getIdEmpresaFuncionario() {
 		return idEmpresaFuncionario;
 	}

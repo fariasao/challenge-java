@@ -1,16 +1,19 @@
 package Challenge;
 
 public class Funcionario {
-
+	//Atributos da classe Funcionario
 	private int idFuncionario;
     private String nomeFuncionario;
     private long telefoneFuncionario;
+    
+    //Construtor parametrizado de Funcionario
 	public Funcionario(int idFuncionario, String nomeFuncionario, long telefoneFuncionario) {
 		this.idFuncionario = idFuncionario;
 		this.nomeFuncionario = nomeFuncionario;
 		this.telefoneFuncionario = telefoneFuncionario;
 	}
 	
+	//Getters e Setters
 	public int getIdFuncionario() {
 		return idFuncionario;
 	}

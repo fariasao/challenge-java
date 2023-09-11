@@ -8,10 +8,11 @@ import java.sql.SQLException;
 import oracle.jdbc.pool.OracleDataSource;
 
 public class Gerenciador {
-
+	//Atributos para gerenciar a conexão ao banco de dados
 	private String url = "jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL";
 	private Connection conn;
 	
+	//Construtor do Gerenciador para a conexão ao banco
 	public Gerenciador() throws SQLException {
 		OracleDataSource ods = new OracleDataSource();
 		
@@ -26,6 +27,9 @@ public class Gerenciador {
 		conn = ods.getConnection();
 	}
 	
+	
+	//Métodos de inserção de dados dentro do banco de dados,
+	//cada um recebendo dados da classe em questão para a tabela correspondente
 	public boolean inserirCliente(Cliente c) {
 		String sql = "INSERT INTO tb_hl_cliente VALUES(?, ?, ?, ?, ?, ?, ?)";
 		
@@ -282,6 +286,9 @@ public class Gerenciador {
 		}
 	}
 	
+	
+	//Método genérico para excluir dados inseridos na tabela por meio de um ID determinado no primeiro parametro,
+	//e recebendo outros dois parametros para localizar a tabela no banco e o seu id correspondente
 	public boolean excluir(int id, String tabela, String tabelaId) {
         String sql = "DELETE FROM "+ tabela + " WHERE " + tabelaId + " = ?";
 

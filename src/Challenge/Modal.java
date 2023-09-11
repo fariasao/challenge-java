@@ -1,7 +1,7 @@
 package Challenge;
 
 public class Modal {
-
+	//Atributos da classe Modal
 	private int idModal;
     private String categoriaModal;
     private String tipoModal;
@@ -10,6 +10,7 @@ public class Modal {
     private double limitePeso;
     private double limiteLargura;
     
+    //Construtor parametrizado de Modal
 	public Modal(int idModal, String categoriaModal, String tipoModal, double limiteAltura, double limiteComprimento,
 			double limitePeso, double limiteLargura) {
 		this.idModal = idModal;
@@ -21,6 +22,7 @@ public class Modal {
 		this.limiteLargura = limiteLargura;
 	}
 
+	//Getters e Setters
 	public int getIdModal() {
 		return idModal;
 	}

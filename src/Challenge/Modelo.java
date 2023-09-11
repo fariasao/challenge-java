@@ -1,7 +1,7 @@
 package Challenge;
 
 public class Modelo {
-
+	//Atributos da classe Modelo
 	private int idModelo;
     private String modeloVeiculo;
     private double comprimentoVeiculo;
@@ -9,6 +9,7 @@ public class Modelo {
     private int eixoVeiculo;
     private double pesoVeiculo;
     
+    //Construtor parametrizado de Modelo
 	public Modelo(int idModelo, String modeloVeiculo, double comprimentoVeiculo, double alturaVeiculo, int eixoVeiculo,
 			double pesoVeiculo) {
 		this.idModelo = idModelo;
@@ -19,6 +20,7 @@ public class Modelo {
 		this.pesoVeiculo = pesoVeiculo;
 	}
 
+	//Getters e Setters
 	public int getIdModelo() {
 		return idModelo;
 	}
@@ -67,6 +69,7 @@ public class Modelo {
 		this.pesoVeiculo = pesoVeiculo;
 	}
 	
+	//Método toString com override
 	@Override
     public String toString() {
         return "Modelo [ID: " + idModelo + ", Modelo: " + modeloVeiculo +

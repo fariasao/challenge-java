@@ -8,23 +8,26 @@ import java.util.List;
 
 public class TestaChallenge {
 	public static void main(String[] args) throws SQLException {
+		//Instanciando o gerenciador
 		Gerenciador gc = new Gerenciador();
 		
-		List<Cliente> clientes = new ArrayList<>();
-        List<TipoVeiculo> tiposVeiculo = new ArrayList<>();
-        List<Marca> marcas = new ArrayList<>();
-        List<Modelo> modelos = new ArrayList<>();
-        List<Veiculo> veiculos = new ArrayList<>();
-        List<Empresa> empresas = new ArrayList<>();
-        List<Modal> modais = new ArrayList<>();
-        List<Funcionario> funcionarios = new ArrayList<>();
-        List<Apolice> apolices = new ArrayList<>();
-        List<EmpresaFuncionario> empresaFuncionarios = new ArrayList<>();
-        List<Prestador> prestadores = new ArrayList<>();
-        List<PrestadorModal> prestadorModais = new ArrayList<>();
-        List<ClienteApolice> clienteApolices = new ArrayList<>();
-        List<Servico> servicos = new ArrayList<>();
+		//Utilizando o método de criar ArrayList para o armazenamento de novas array lists
+		List<Cliente> clientes = Utils.criarArrayList();
+        List<TipoVeiculo> tiposVeiculo = Utils.criarArrayList();
+        List<Marca> marcas = Utils.criarArrayList();
+        List<Modelo> modelos = Utils.criarArrayList();
+        List<Veiculo> veiculos = Utils.criarArrayList();
+        List<Empresa> empresas = Utils.criarArrayList();
+        List<Modal> modais = Utils.criarArrayList();
+        List<Funcionario> funcionarios = Utils.criarArrayList();
+        List<Apolice> apolices = Utils.criarArrayList();
+        List<EmpresaFuncionario> empresaFuncionarios = Utils.criarArrayList();
+        List<Prestador> prestadores = Utils.criarArrayList();
+        List<PrestadorModal> prestadorModais = Utils.criarArrayList();
+        List<ClienteApolice> clienteApolices = Utils.criarArrayList();
+        List<Servico> servicos = Utils.criarArrayList();
 		
+        //Instanciando os objetos de cada classe
 		Cliente c = new Cliente(1, "roger", "Senha123", "rua b", 123456789, "CPF", "123.456.78904");
         TipoVeiculo TpVeiculo = new TipoVeiculo(1, "Carro");
         Marca m = new Marca(1, "Toyota");
@@ -40,6 +43,7 @@ public class TestaChallenge {
 		ClienteApolice ca = new ClienteApolice(c.getIdCliente(), a.getIdApolice());
 		Servico s = new Servico(1, c.getIdCliente(), p.getIdPrestador(), new Timestamp(System.currentTimeMillis()), "Local X", "A");
 		
+		//Adicionando os objetos dendo de suas devidas ArrayLists
 		clientes.add(c);
         tiposVeiculo.add(TpVeiculo);
         marcas.add(m);
@@ -55,6 +59,7 @@ public class TestaChallenge {
         clienteApolices.add(ca);
         servicos.add(s);
 		
+        //Inserção dos dados no banco de dados, assim como retorno de mensagem indicando sucesso ou falha
 		System.out.println(gc.inserirCliente(c) ? 
 				"Cliente registrado" : "Cliente nao registrado");
 		
@@ -84,7 +89,7 @@ public class TestaChallenge {
 		
 		System.out.println(gc.inserirEmpresaFuncionario(ef) ? 
 				"Funcionario-Empresa cadastrado" : "Funcionario-Empresa não cadastrado");
-//		
+		
 		System.out.println(gc.inserirPrestador(p) ? 
 				"Prestador registrado" : "Prestador nao registrado");
 
@@ -93,15 +98,16 @@ public class TestaChallenge {
 
 		System.out.println(gc.inserirClienteApolice(ca) ? 
 				"Cliente-Apolice registrado" : "Cliente-Apolice nao registrado");
-//		
+		
 		System.out.println(gc.inserirServico(s) ? 
 				"Servico registrado" : "Servico nao registrado");
 		
+		//Método para excluir itens do banco de dados, de maneira genérica por meio da inserção do nome e do id da tabela
 //		System.out.println(gc.excluir(1, "tb_hl_servico", "id_servico") ?
 //				"Cliente Excluido" : "Cliente não excluido");
 		
 		
-//		metodos aqui
+		//Impressão dos dados, junto ao método toString em override
 		System.out.println("\nInformações do Cliente:");
 		System.out.println(c.toString());
         
@@ -120,6 +126,7 @@ public class TestaChallenge {
         System.out.println("\nInformações do Servico:");
         System.out.println(s.toString());
         
+        //Método para localização de veículo
         Veiculo veiculoEncontrado = Utils.encontrarVeiculoPorId(veiculos, 1);
         if (veiculoEncontrado != null) {
             System.out.println("\nVeículo encontrado: " + veiculoEncontrado);
@@ -127,13 +134,15 @@ public class TestaChallenge {
             System.out.println("\nVeículo não encontrado.");
         }
         
+        //Calculo do valor total de apolices
         double valorTotalApolices = Utils.calcularValorTotalApolices(apolices);
         System.out.println("\nValor Total das Apólices: R$" + valorTotalApolices);
         
+        //Impressão do tipo de pessoa cadastrada no sistema
         if (c.isPessoaFisica()) {
-            System.out.println("\nEste é um cliente pessoa física.");
+            System.out.println("\nEste cliente está cadastrado como Pessoa Física (PF).");
         } else if (c.isPessoaJuridica()) {
-            System.out.println("\nEste é um cliente pessoa jurídica.");
+            System.out.println("\nEste cliente está cadastrado como Pessoa Jurídica (PJ).");
         }
 
 	}

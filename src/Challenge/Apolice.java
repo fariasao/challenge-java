@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Apolice {
-	
+	//Atributos da classe Apólice
 	private int idApolice;
     private int idVeiculo;
     private String statusApolice;
@@ -12,6 +12,7 @@ public class Apolice {
     private Date vigenciaApolice;
     private String placaVeiculo;
     
+    //Construtor parametrizado de Apolice
 	public Apolice(int idApolice, int idVeiculo, String statusApolice, double valorApolice, Date vigenciaApolice,
 			String placaVeiculo) {
 		this.idApolice = idApolice;
@@ -22,6 +23,7 @@ public class Apolice {
 		this.placaVeiculo = placaVeiculo;
 	}
 
+	//Getters e Setters
 	public int getIdApolice() {
 		return idApolice;
 	}
@@ -70,6 +72,7 @@ public class Apolice {
 		this.placaVeiculo = placaVeiculo;
 	}
 	
+	//Método toString com Override
 	@Override
 	public String toString() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");

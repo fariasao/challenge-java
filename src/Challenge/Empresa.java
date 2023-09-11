@@ -1,16 +1,19 @@
 package Challenge;
 
 public class Empresa {
-
+	//Atributos da classe Apólice
 	private int idEmpresa;
     private String nomeEmpresa;
     private long telefoneEmpresa;
+    
+    //Construtor parametrizado de Empresa
 	public Empresa(int idEmpresa, String nomeEmpresa, long telefoneEmpresa) {
 		this.idEmpresa = idEmpresa;
 		this.nomeEmpresa = nomeEmpresa;
 		this.telefoneEmpresa = telefoneEmpresa;
 	}
 	
+	//Getters e Setters
 	public int getIdEmpresa() {
 		return idEmpresa;
 	}

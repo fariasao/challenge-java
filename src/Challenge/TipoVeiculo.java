@@ -1,13 +1,17 @@
 package Challenge;
 
 public class TipoVeiculo {
-
+	//Atributos da classe TipoVeiculo
 	private int idTipoVeiculo;
     private String tipoVeiculo;
+    
+    //Construtor parametrizado de TipoVeiculo
 	public TipoVeiculo(int idTipoVeiculo, String tipoVeiculo) {
 		this.idTipoVeiculo = idTipoVeiculo;
 		this.tipoVeiculo = tipoVeiculo;
 	}
+	
+	//Getters e Setters
 	public int getIdTipoVeiculo() {
 		return idTipoVeiculo;
 	}
@@ -20,6 +24,4 @@ public class TipoVeiculo {
 	public void setTipoVeiculo(String tipoVeiculo) {
 		this.tipoVeiculo = tipoVeiculo;
 	}
-    
-    
 }
