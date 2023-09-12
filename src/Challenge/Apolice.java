@@ -3,7 +3,7 @@ package Challenge;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Apolice {
+public class Apolice implements Descricao{
 	//Atributos da classe Apólice
 	private int idApolice;
     private int idVeiculo;

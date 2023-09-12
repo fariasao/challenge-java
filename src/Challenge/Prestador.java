@@ -1,6 +1,6 @@
 package Challenge;
 
-public class Prestador {
+public class Prestador implements Descricao{
 	//Atributos da classe Prestador
 	private int idPrestador;
     private int idEmpresaFuncionario;

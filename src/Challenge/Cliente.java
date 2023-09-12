@@ -1,6 +1,6 @@
 package Challenge;
 
-public class Cliente {
+public class Cliente implements Descricao{
 	//Atributos da classe Cliente
 	private int idCliente;
     private String nomeCliente;

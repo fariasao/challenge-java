@@ -1,6 +1,6 @@
 package Challenge;
 
-public class Modelo {
+public class Modelo implements Descricao{
 	//Atributos da classe Modelo
 	private int idModelo;
     private String modeloVeiculo;

@@ -3,7 +3,7 @@ package Challenge;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
-public class Servico {
+public class Servico implements Descricao{
 	//Atributos da classe Servico
 	private int idServico;
     private int idCliente;
